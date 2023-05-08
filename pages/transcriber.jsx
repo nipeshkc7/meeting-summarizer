@@ -12,10 +12,17 @@ export default function SSRPage({ user }) {
     setState(previous => ({ ...previous, isLoading: true }))
 
     try {
-      const response = await fetch('/api/generateTLDR');
+      const response = await fetch('/api/generateTLDR', {
+        method: 'POST',
+        body:JSON.stringify({meetingText: meetingText}),
+        headers:{
+          Accept: 'application/json',
+          'Content-Type': 'application/json', 
+        }
+      });
       const data = await response.json();
 
-      setTLDR(JSON.stringify(data));
+      setTLDR(data.message);
       // setState(previous => ({ ...previous, response: data, error: undefined }))
     } catch (error) {
       // setState(previous => ({ ...previous, response: undefined, error }))
@@ -39,7 +46,7 @@ export default function SSRPage({ user }) {
           <p>
             Paste the meeting text here
           </p>
-          <Input type="text" value={meetingText} onChange={(e)=> setMeetingText(e.target.value)} />
+          <Input type="textarea" value={meetingText} onChange={(e)=> setMeetingText(e.target.value)} />
           <Button color="primary" className="mt-5" onClick={e => handle(e)} data-testid="external-action">
             Transcribe meeting
         </Button>
