@@ -44,11 +44,9 @@ export default function SSRPage({ user }) {
         <h1 data-testid="ssr-title">Meeting TLDR;</h1>
         <div data-testid="ssr-text">
           <p>
-            Paste the meeting text here
-          </p>
-          <Input type="textarea" value={meetingText} onChange={(e)=> setMeetingText(e.target.value)} />
+            Paste the meeting text here </p> <Input type="textarea" value={meetingText} onChange={(e)=> setMeetingText(e.target.value)} />
           <Button color="primary" className="mt-5" onClick={e => handle(e)} data-testid="external-action">
-            Transcribe meeting
+            Generate TLDR
         </Button>
         </div>
         <div>
