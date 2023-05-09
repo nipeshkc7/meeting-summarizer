@@ -1,3 +1,14 @@
-import { handleAuth } from '@auth0/nextjs-auth0';
+import { handleAuth, handleLogin, handleLogout } from '@auth0/nextjs-auth0';
 
-export default handleAuth();
+export default handleAuth({
+    async login(req, res) {
+        await handleLogin(req, res, {
+            returnTo: '/tldrGenerator'
+        })
+    },
+    async logout(req, res) {
+        await handleLogout(req, res, {
+            returnTo: '/'
+        })
+    }
+});

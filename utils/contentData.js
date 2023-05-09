@@ -1,28 +1,28 @@
 const contentData = [
   {
-    title: 'Configure Other Identity Providers',
-    link: 'https://auth0.com/docs/identityproviders',
-    description:
-      'Auth0 supports social providers as Facebook, Twitter, Instagram and 100+, Enterprise providers as Microsoft Office 365, Google Apps, Azure, and more. You can also use any OAuth2 Authorization Server.'
+    title: 'Project Scope',
+    link: '/',
+    description: 'Discuss and define the goals, deliverables, timelines, and resources needed for the project.',
   },
   {
-    title: 'Enable Multifactor Authentication',
-    link: 'https://auth0.com/docs/mfa',
-    description:
-      'Add an extra layer of security by enabling Multi-factor Authentication, requiring your users to provide more than one piece of identifying information. Push notifications, authenticator apps, SMS, and DUO Security are supported.'
+    title: 'Task Assignments',
+    link: '/',
+    description: 'Assign specific tasks and responsibilities to team members, and establish deadlines for completion.',
   },
   {
-    title: 'Attack Protection',
-    link: 'https://auth0.com/docs/attack-protection',
-    description:
-      'Auth0 can detect anomalies and stop malicious attempts to access your application. Attack protection can alert you and your users of suspicious activity, as well as block further login attempts.'
+    title: 'Progress Check',
+    link: '/',
+    description: 'Check the progress of ongoing tasks and ensure that the project is on track to meet its goals.',
   },
   {
-    title: 'Learn About Rules',
-    link: 'https://auth0.com/docs/rules',
-    description:
-      "Rules are JavaScript functions that execute when a user authenticates to your application. They run once the authentication process is complete, and you can use them to customize and extend Auth0's capabilities."
-  }
+    title: 'Roadblocks and Solutions',
+    link: '/',
+    description: 'Identify any roadblocks or challenges that are impeding progress, and work together to find solutions to overcome them.',
+  },
+  {
+    title: 'Next Steps',
+    link: '/',
+    description: 'Discuss and plan next steps, including follow-up actions, the next meeting, and any additional resources or support needed.',
+  },
 ];
-
 export default contentData;
